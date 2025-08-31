@@ -1,0 +1,14 @@
+
+fields:
+  title:
+    - css: "h1"
+    - css: "meta[property='og:title']"
+  author:
+    - css: "[class*='Author'], [class*='author']"
+  weapon:
+    - css: "[data-slot='weapon'] img"
+    - css: "[class*='slot-weapon'] img"
+    - css: "[class*='Weapon'] img"
+    - css: "img[alt*='Axe' i], img[alt*='Sword' i], img[alt*='Spear' i], img[alt*='Bow' i], img[alt*='Dagger' i], img[alt*='Staff' i]"
+  abilities:
+    - css: "[class*='ability'], [class*='spell'], [class*='skill']"
