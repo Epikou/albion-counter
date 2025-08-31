@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "startCommand": "gunicorn tools.api_server:app -b 0.0.0.0:$PORT --timeout 180",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}

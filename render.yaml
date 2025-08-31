@@ -1,0 +1,11 @@
+
+services:
+  - type: web
+    name: albion-counter
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
