@@ -17,4 +17,4 @@ COPY . .
 
 # Default to port 10000 (Render sets $PORT)
 ENV PORT=10000
-CMD ["bash", "-lc", "exec gunicorn tools.api_server:app -b 0.0.0.0:${PORT} --timeout 180"]
+CMD ["bash", "-lc", "exec gunicorn wsgi:app -b 0.0.0.0:${PORT} --timeout 180"]
